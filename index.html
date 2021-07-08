@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>BMI Calculator</title>
+    <link
+        rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'
+        integrity='sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=='
+        crossorigin='anonymous'
+    />
+
+    <link
+        rel="stylesheet"
+        href="css/all.css"
+    >
+
+</head>
+
+<body>
+    <header>
+        <div class="container justifyContent--spaceAround flex--row alignItems--start">
+            <img
+                src="./img/BMICLogo.png"
+                alt="logo image"
+                class="logo"
+            >
+            <form class="form flex--row">
+                <div class="inputGroup flex--column">
+                    <label
+                        class="form__label"
+                        for="height"
+                    >
+                        身高 cm
+                    </label>
+                    <input
+                        type="number"
+                        name="height"
+                        id="height"
+                        class="form__input form__input form__input--primary form__input--radius js-height"
+                        placeholder="請輸入身高"
+                    >
+                    <label
+                        class="form__label"
+                        for="weight"
+                    >
+                        體重 kg
+                    </label>
+                    <input
+                        type="number"
+                        name="weight"
+                        id="weight"
+                        class="form__input form__input--radius form__input--primary js-weight"
+                        placeholder="請輸入體重"
+                    >
+                </div>
+            </form>
+            <div class="iteraction flex--row">
+                <button class="btn submitBtn  btn--primary btn--circle js-submitBtn">看結果</button>
+                <div class="result result--hide flex--row justifyContent--center alignItems--centers js-result">
+                    <div class="result__bmi">
+                        <p class="result__value js-result__value"></p>
+                        <p>BMI</p>
+                        <button class="btn redoBtn--hide redoBtn btn--smallCircle js-redoBtn">
+                            <img
+                                src="./img/icons_loop.png"
+                                alt="redo icon"
+                            >
+                        </button>
+                    </div>
+                    <p class="result__status js-result__status"></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="recorder">
+        <div class="container flex--column alignItems--center">
+            <h2 class="title text--center">BMI 紀錄</h2>
+            <ul class="list recorderList js-list">
+            </ul>
+        </div>
+    </div>
+    <footer class="flex--row justifyContent--center">
+        <img
+            src="./img/BMICLogo_small.png"
+            alt="footer logo"
+        >
+    </footer>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js'></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

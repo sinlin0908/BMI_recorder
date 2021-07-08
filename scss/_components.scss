@@ -1,0 +1,78 @@
+.btn {
+  display: inline-block;
+  outline: none;
+  border: 0px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  &--circle {
+    @include circle($large-btn-width, $large-btn-heigh);
+  }
+  &--smallCircle {
+    @include circle($small-btn-width, $small-btn-heigh);
+  }
+  &--primary {
+    background-color: $secondary;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form {
+  // margin-left: 6rem;
+
+  &__label {
+    color: $secondary;
+    margin-bottom: 7px;
+    font-size: 1.125rem;
+  }
+  & {
+    &__input {
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+      padding: 0.5rem 1rem;
+      outline: none;
+
+      &--primary {
+        color: $thirdly;
+        background-color: $primary;
+      }
+
+      &--radius {
+        border: 2px solid $secondary;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.text--center {
+  text-align: center;
+}
+
+%list-border {
+  border-left-width: 6px;
+  border-left-style: solid;
+}
+
+.list {
+  &__item {
+    background-color: #ffffff;
+    width: 624px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1rem;
+    @each $key, $vale in $result-colors {
+      &--#{$key} {
+        @extend %list-border;
+        border-left-color: $vale;
+      }
+    }
+  }
+}

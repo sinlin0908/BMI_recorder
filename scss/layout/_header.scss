@@ -1,0 +1,73 @@
+header {
+  background-color: $primary;
+  padding-top: 5.75rem;
+  padding-bottom: 5.75rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-family: $header-font-family;
+  margin-bottom: 1.6rem;
+}
+
+.submitBtn {
+  &--hide {
+    display: none;
+  }
+  &:hover {
+    box-shadow: 0 0 10px $secondary;
+  }
+}
+
+.result {
+  &__bmi {
+    @include circle($large-btn-width, $large-btn-heigh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__value {
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+  &__status {
+    font-size: 2rem;
+    width: 4rem;
+    margin-left: 1rem;
+    // position: absolute;
+  }
+
+  .redoBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 2px solid $primary;
+    transition: transform 0.5s ease-in-out;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  @each $key, $value in $result-colors {
+    &--#{$key} {
+      color: $value;
+      .result__bmi {
+        border: 6px solid $value;
+      }
+      .redoBtn {
+        background-color: $value;
+      }
+    }
+  }
+
+  &--hide {
+    .result__bmi {
+      display: none;
+    }
+    .result__status {
+      visibility: hidden;
+    }
+  }
+}

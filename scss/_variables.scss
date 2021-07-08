@@ -1,0 +1,33 @@
+$font-size: 16px;
+$header-font-family: "SFNSDisplay";
+$font-family: "PingFangSC-Regular, sans-serif";
+
+// btn
+$large-btn-width: 120px;
+$large-btn-heigh: 120px;
+$small-btn-width: 30px;
+$small-btn-heigh: 30px;
+
+// Color
+$primary: #424242;
+$secondary: #ffd366;
+$thirdly: #f4f4f4;
+$danger: #ff0000;
+
+$good: #86d73f;
+$thin: #31baf9;
+$fat: #ff982d;
+$middle-fat: #ff6c02;
+$very-fat: #ff1200;
+
+$result-colors: (
+  "good": $good,
+  "thin": $thin,
+  "fat": $fat,
+  "middleFat": $middle-fat,
+  "veryFat": $very-fat,
+);
+
+// layout
+
+$container-max-size: 960px;
