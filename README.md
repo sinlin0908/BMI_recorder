@@ -2,7 +2,7 @@
 
 ![demo](https://i.imgur.com/zJknWfd.png)
 
-成品 Demo :
+成品 Demo :[https://sinlin0908.github.io/BMI_recorder/](https://sinlin0908.github.io/BMI_recorder/)
 
 - 基本功能需求：
   - 計算 BMI
